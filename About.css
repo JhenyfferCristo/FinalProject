@@ -1,0 +1,59 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("About-img/soil.jpg");
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  padding: 0 50px;
+  padding: 30px 50px 30px 50px;
+}
+.aboutBox {
+  position: relative;
+  max-width: 600px;
+  padding: 50px;
+  background-color: rgba(215, 215, 215, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.aboutBox h1 {
+  display: flex;
+  justify-content: center;
+  color: #3f3d3d;
+  font-weight: 500;
+}
+.aboutBox p {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  color: #3f3d3d;
+}
+.boldAbout{
+  text-align: center;
+  color:#3f3d3d;
+}
+@media (max-width: 800px){
+  .aboutBox {
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(215, 215, 215, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 200px 10px 30px 10px;
+  }
+  section {
+    padding:20px;
+  }
+  .aboutBox p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #3f3d3d;
+  }
+}

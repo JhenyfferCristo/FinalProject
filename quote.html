@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500&display=swap");
+    </style>
+    <link rel="stylesheet" href="quote.css" />
+    <link rel="stylesheet" href="navBar.css"/>
+    <link rel="stylesheet" href="footer.css"/>
+    <script src="quote.js"></script>
+    <title>Quote</title>
+  </head>
+  <body>
+    <header></header>
+    <h1>ONLINE ESTIMATE</h1>
+    <p class="pBox">
+      Have a landscaping idea but not sure where to start? You can get a decent
+      idea of cost from our calculator, just plug in your needs and generate a
+      base price / estimate.
+    </p>
+    <div>
+      <h2>RESIDENTIAL SERVICES PRICES</h2>
+      <p>
+        Based off an average yard size of 10000 Square Feet, choose what you
+        need done weekly, monthly or just one time!
+      </p>
+      <div class="centerTable">
+        <table class="mainTable">
+          <thead>
+            <tr>
+              <td>Service</td>
+              <td>Price</td>
+              <td>Quantity</td>
+              <td class="ServValue">Total</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Landscape Maintenance (pruning / weed removal)</td>
+              <td>$10/ Hr</td>
+              <td>
+                <input
+                  type="number"
+                  size="4"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'land')"
+                />
+              </td>
+              <td id="total-land">$0.00</td>
+            </tr>
+            <tr>
+              <td>Treatment & fertilization</td>
+              <td>$0.003 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'treat', 3)"
+                />
+              </td>
+              <td id="total-treat">$0.00</td>
+            </tr>
+            <tr>
+              <td>Lawn Thatching / clean up</td>
+              <td>$0.004 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'lawn', 3)"
+                />
+              </td>
+              <td id="total-lawn">$0.00</td>
+            </tr>
+            <tr>
+              <td>Grass cutting</td>
+              <td>$0.004 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'grass', 3)"
+                />
+              </td>
+              <td id="total-grass">$0.00</td>
+            </tr>
+            <tr>
+              <td>Mulching</td>
+              <td>$0.001 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'mulching', 3)"
+                />
+              </td>
+              <td id="total-mulching">$0.00</td>
+            </tr>
+            <tr>
+              <td>Seeding</td>
+              <td>$0.007 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'seeding', 3)"
+                />
+              </td>
+              <td id="total-seeding">$0.00</td>
+            </tr>
+            <tr>
+              <td>Aeration</td>
+              <td>$0.003 / Square Foot</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'aeration', 3)"
+                />
+              </td>
+              <td id="total-aeration">$0.00</td>
+            </tr>
+            <tr>
+              <td>Tree-health inspections</td>
+              <td>$5 / Tree</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'health')"
+                />
+              </td>
+              <td id="total-health">$0.00</td>
+            </tr>
+            <tr>
+              <td>Tree trimming</td>
+              <td>$40 / Tree</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'trimming')"
+                />
+              </td>
+              <td id="total-trimming">$0.00</td>
+            </tr>
+            <tr>
+              <td>Shrub pruning</td>
+              <td>$10 / Hr</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'shrub')"
+                />
+              </td>
+              <td id="total-shrub">$0.00</td>
+            </tr>
+            <tr>
+              <td>Weed management</td>
+              <td>$10 / Hr</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'weed')"
+                />
+              </td>
+              <td id="total-weed">$0.00</td>
+            </tr>
+            <tr>
+              <td>Tree removal</td>
+              <td>$80 / Tree</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  onchange="onQuantityChange(this.value, 'removal')"
+                />
+              </td>
+              <td id="total-removal">$0.00</td>
+            </tr>
+            <tr>
+              <td>Final Price</td>
+              <td></td>
+              <td></td>
+              <td id="total-final">$0.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+  <script src="navBar.js"></script>
+  <script src="footer.js"></script>
+</html>
